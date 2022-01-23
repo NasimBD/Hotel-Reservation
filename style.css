@@ -1,0 +1,232 @@
+body * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto Light", sans-serif;
+    background: linear-gradient(180deg, lightseagreen 20%, #fdfafa 20%) no-repeat;
+}
+
+form{
+    margin: 50px auto;
+    max-width: 700px;
+    background-color: white;
+    box-shadow: 0 0 4px 2px #c1bfbf;
+    color: #323232;
+}
+
+form h1{
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: #eeeded;
+}
+
+.fa-calendar-alt{
+    color: #727272;
+    font-size: 1.7rem;
+    padding-right: 1rem;
+}
+
+.fields{
+    padding: 1rem;
+}
+
+.fields > div {
+    margin-bottom: 1rem;
+}
+
+.wrapper-single, .wrapper-double{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.wrapper-double label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.field, input[type="date"], select {
+    border: 1px #afaeae solid;
+    border-radius: 7px;
+}
+
+.field input, input[type="date"], select {
+    color: #4c4c4c;
+}
+
+input[type="date"] {
+    padding: 0.8rem 0.3rem;
+
+}
+
+.field input{
+    width: calc(100% - 2.5rem);
+}
+
+.field:focus input{
+    outline: #82a5e3 solid;
+}
+
+label{
+    color: #7f7e7e;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input:not([type="date"]) {
+    padding: 0.8rem 0;
+    border: none;
+    outline: none;
+}
+
+.field .fas{
+    color: #aaa8a8;
+    font-size: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+select{
+    background-color: white;
+    padding: 0.8rem 0.5rem;
+}
+
+.date-div, .demographics-select{
+    display: flex;
+}
+
+input[type="submit"]{
+    display: block;
+    width: 100%;
+    background-color: #d5ecaa;
+    color: #0d390c;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.4s all;
+    box-shadow: 0 0 4px 2px #aaa8a8;
+}
+
+input[type="submit"]:hover {
+    background-color: #82a5e3;
+    color: white;
+    box-shadow: none;
+}
+
+#errors{
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: #991111;
+}
+
+/* -------------------------------- media */
+/* -------------------------------- 1 */
+@media screen and (max-width: 576px) {
+    html{
+        font-size: 12px;
+    }
+
+    .wrapper-single > *, .wrapper-double > *{
+        flex: 1 1 100%;
+    }
+
+    .wrapper-double > *:not(:nth-child(1)){
+        margin-top: 1.5rem;
+    }
+
+    .date-div, .demographics-select{
+        flex-flow: column nowrap;
+    }
+}
+
+/* -------------------------------- 2 */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+
+    .wrapper-single > label{
+        flex: 1 1 20%;
+    }
+
+    .wrapper-single > *:nth-child(2){
+        flex: 1 1 80%;
+    }
+
+    .wrapper-double > *{
+        flex: 1 1 50%;
+    }
+
+    .wrapper-double > *:nth-child(1){
+        padding-right: 0.5rem;
+    }
+
+    .date-div, .demographics-select{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .date-div label, .demographics-select label{
+        flex: 1 1 30%;
+    }
+
+    .date-div input, .demographics-select select{
+        flex: 1 1 70%;
+    }
+
+    .date-div:nth-child(1), .demographics-select:nth-child(1){
+        padding-right: 1rem;
+    }
+}
+
+/* -------------------------------- 3 */
+@media screen and (min-width: 768px) {
+    html{
+        font-size: 16px;
+    }
+
+    .wrapper-single > label{
+        flex: 1 1 15%;
+    }
+
+    .wrapper-single > *:nth-child(2){
+        flex: 1 1 85%;
+    }
+
+    .wrapper-double > *{
+        flex: 1 1 50%;
+    }
+
+    .wrapper-double > *:nth-child(1){
+        padding-right: 0.5rem;
+    }
+
+    .date-div, .demographics-select{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .date-div label, .demographics-select label{
+        flex: 1 1 30%;
+    }
+
+    .date-div input, .demographics-select select{
+        flex: 1 1 70%;
+    }
+
+    .date-div:nth-child(1), .demographics-select:nth-child(1){
+        padding-right: 1rem;
+    }
+}
